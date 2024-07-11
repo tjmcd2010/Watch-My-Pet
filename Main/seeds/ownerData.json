@@ -1,17 +1,23 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john@doe.com",
+    "animal_type": "dog",
+    "breed": "labrador"
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "email": "jane@doe.com",
+    "animal_type": "cat",
+    "breed": "persian"
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "first_name": "Bob",
+    "last_name": "Smith",
+    "email": "bob@smith.com",
+    "animal_type": "dog",
+    "breed": "golden retriever"
   }
 ]

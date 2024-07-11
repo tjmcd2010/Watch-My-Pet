@@ -8,7 +8,7 @@ class Owner extends Model {
   }
 }
 
-User.init(
+Owner.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -38,13 +38,13 @@ User.init(
   },
   {
     hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
+      beforeCreate: async (newOwnerData) => {
+        newOwnerData.password = await bcrypt.hash(newOwnerData.password, 10);
+        return newOwnerData;
       },
-      beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
-        return updatedUserData;
+      beforeUpdate: async (updatedOwnerData) => {
+        updatedOwnerData.password = await bcrypt.hash(updatedOwnerData.password, 10);
+        return updatedOwnerData;
       },
     },
     sequelize,
