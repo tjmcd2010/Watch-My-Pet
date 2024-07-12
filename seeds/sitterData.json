@@ -2,17 +2,20 @@
   {
     "first_name": "Sal",
     "last_name": "Sally",
-    "email": "sal@hotmail.com"
+    "email": "sal@hotmail.com",
+    "password": "12345678"
   },
   {
     "first_name": "Lern",
     "last_name": "Lernantino",
-    "email": "lern@hotmail.com"
+    "email": "lern@hotmail.com",
+    "password": "12345678"
   },
   {
     "first_name": "Amiko",
     "last_name": "Amiko",
-    "email": "amiko@hotmail.com"
+    "email": "amiko@hotmail.com",
+    "password": "12345678"
   }
 
 ]

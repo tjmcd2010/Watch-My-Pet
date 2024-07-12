@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Sitter, Owner } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -27,9 +27,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/sitter/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
+    const sitterData = await Sitter.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -38,10 +38,10 @@ router.get('/project/:id', async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const sitter = sitterData.get({ plain: true });
 
-    res.render('project', {
-      ...project,
+    res.render('sitter', {
+      ...sitter,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -53,12 +53,12 @@ router.get('/project/:id', async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
+    const ownerData = await Owner.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Project }],
+      include: [{ model: Sitter }],
     });
 
-    const user = userData.get({ plain: true });
+    const owner = ownerData.get({ plain: true });
 
     res.render('profile', {
       ...user,
