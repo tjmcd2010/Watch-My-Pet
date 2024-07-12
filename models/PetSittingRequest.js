@@ -45,7 +45,14 @@ PetSittingRequest.init(
         serviceEndDate: {
             type: DataTypes.DATE,
             allowNull: false
-        }
+        },
+        ownerContact: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        ownerPhone: {
+            type: DataTypes.STRING,
+            allowNull: false}
     },
     {
         sequelize,
