@@ -29,15 +29,6 @@ Owner.init(
         isEmail: true,
       },
     },
-    /*animalType: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      field: 'animal_type',
-    },
-    breed: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },*/
     password: {
       type: DataTypes.STRING,
       allowNull: false,
