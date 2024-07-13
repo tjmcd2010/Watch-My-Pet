@@ -1,17 +1,17 @@
 [
   {
-    "owner_name": "John",
+    "ownerName": "John",
     "email": "john@doe.com",
     "password": "12345678"
   },
   {
-    "owner_name": "Jane",
+    "ownerName": "Jane",
     "email": "jane@doe.com",
-    "password": "12345678"
+    "password": "a9d0f78b"
   },
   {
-    "owner_name": "Bob",
+    "ownerName": "Bob",
     "email": "bob@smith.com",
-    "password": "12345678"
+    "password": "u3h2n5f6"
   }
 ]

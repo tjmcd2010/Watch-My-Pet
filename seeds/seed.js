@@ -12,9 +12,9 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const requestData of requestData) {
+  for (const requests of requestData) {
     await PetSittingRequest.create({
-      ...requestData,
+      ...requests,
       owner_id: owners[Math.floor(Math.random() * owners.length)].id,
     });
   }

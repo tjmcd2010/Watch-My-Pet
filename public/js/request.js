@@ -1,60 +1,23 @@
-const PetSittingRequestForm = () => {
-  const [form, setForm] = useState({
-    ownerName: '',
-    petName: '',
-    petType: '',
-    petBreed: '',
-    petWeight: '',
-    serviceType: '',
-    serviceStartDate: '',
-    serviceEndDate: '',
-    ownerPhone: '',
-  });
-  
+document.querySelector("#new-request-form").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-   
+  const petName = document.querySelector("#pet-name").value.trim();
 
-  /*const name = document.querySelector('#project-name').value.trim();
-  const needed_funding = document.querySelector('#project-funding').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
 
-  if (name && needed_funding && description) {
-    const response = await fetch(`/api/projects`, {
-      method: 'POST',
-      body: JSON.stringify({ name, needed_funding, description }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+  // fetch call to a post request to create a new sitting request
+  /*
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to create project');
+  fetch("/api/requests", {
+    method: "POST",
+    body: JSON.stringify({
+      petName: petName
+    }),
+    headers: {
+      "Content-Type": "application/json"
     }
-  }
-};
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+  */
 
-    const response = await fetch(`/api/projects/${id}`, {
-      method: 'DELETE',
-    });
+  alert("Submitted!")
+})
 
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete project');
-    }
-  }
-};
-
-document
-  .querySelector('.new-project-form')
-  .addEventListener('submit', newFormHandler);
-
-document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
