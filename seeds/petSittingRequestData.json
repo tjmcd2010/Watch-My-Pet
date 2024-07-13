@@ -1,0 +1,38 @@
+[
+    {
+        "owner_id": 1,
+        "petName": "Fluffy",
+        "petType": "Dog",
+        "petBreed": "Domestic",
+        "petWeight": 10,
+        "serviceType": "Walking",
+        "serviceStartDate": "2024-07-20",
+        "serviceEndDate": "2024-07-23",
+        "ownerPhone": "555-555-5555"
+    },
+
+    {
+        "owner_id": 2,
+        "petName": "Max",
+        "petType": "Dog",
+        "petBreed": "Labrador",
+        "petWeight": 25,
+        "serviceType": "Sitter's House Sitting",
+        "serviceStartDate": "2024-07-28",
+        "serviceEndDate": "2024-08-01",
+        "ownerPhone": "222-222-2222"
+    },
+
+    {
+        "owner_id": 3,
+        "petName": "Charlie",
+        "petType": "Cat",
+        "petBreed": "Domestic",
+        "petWeight": 5,
+        "serviceType": "Owner's House Sitting",
+        "serviceStartDate": "2024-08-05",
+        "serviceEndDate": "2024-08-09",
+        "ownerPhone": "333-333-3333"
+    }
+
+]
