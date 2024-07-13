@@ -1,7 +1,20 @@
-const newFormHandler = async (event) => {
-  event.preventDefault();
+const PetSittingRequestForm = () => {
+  const [form, setForm] = useState({
+    ownerName: '',
+    petName: '',
+    petType: '',
+    petBreed: '',
+    petWeight: '',
+    serviceType: '',
+    serviceStartDate: '',
+    serviceEndDate: '',
+    ownerPhone: '',
+  });
+  
 
-  const name = document.querySelector('#project-name').value.trim();
+   
+
+  /*const name = document.querySelector('#project-name').value.trim();
   const needed_funding = document.querySelector('#project-funding').value.trim();
   const description = document.querySelector('#project-desc').value.trim();
 
