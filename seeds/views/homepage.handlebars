@@ -1,0 +1,43 @@
+<!-- Loop over each object in the sitters array -->
+{{#each sitters as |sitter| }}
+<div class="row mb-4 sitter">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      {{{get_emoji}}}
+      <a href="/sitter/{{sitter.id}}">{{sitter.name}}</a>
+    </h2>
+    <p>
+      <span for="img" aria-label="money">💲</span>
+      <!-- Pass needed_funding value to the helper function -->
+      <span class="dollar-amount">{{format_amount sitter.needed_funding}}</span>
+      needed!
+    </p>
+    <p>Created by {{sitter.user.name}} on {{format_date sitter.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{sitter.description}}
+    </p>
+  </div>
+</div>
+{{/each}}
+
+<!-- Loop over each object in the owners array -->
+{{#each owners as |owner| }}
+<div class="row mb-4 owner">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      {{{get_emoji}}}
+      <a href="/owner/{{owner.id}}">{{owner.name}}</a>
+    </h2>
+      <p>Created by {{owner.user.name}} on {{format_date owner.date_created}}</p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{owner.description}}
+    </p>
+  </div>
+</div>
+{{/each}}
