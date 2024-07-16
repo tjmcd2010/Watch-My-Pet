@@ -1,23 +1,19 @@
-document.querySelector("#new-request-form").addEventListener("submit", function(event) {
+document.querySelector("#new-request-form").addEventListener("submit", (event) => {
   event.preventDefault();
-
   const petName = document.querySelector("#pet-name").value.trim();
-
-
-  // fetch call to a post request to create a new sitting request
-  /*
-
+  const requestBody = JSON.stringify({ petName });
   fetch("/api/requests", {
     method: "POST",
-    body: JSON.stringify({
-      petName: petName
-    }),
+    body: requestBody,
     headers: {
-      "Content-Type": "application/json"
-    }
-
-  */
-
-  alert("Submitted!")
-})
+      "Content-Type": "application/json",
+    },
+  })
+    .then(() => {
+      alert("Submitted!");
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+});
 
