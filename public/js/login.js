@@ -44,6 +44,19 @@ const signupFormHandler = async (event) => {
   }
 };
 
+// const viewPasswordHandler = () => {
+//   const passwordInput = document.querySelector('#password-login');
+//   const icon = document.querySelector('#view-password');
+
+//   if (passwordInput.type === 'password') {
+//     passwordInput.type = 'text';
+//     icon.textcontent = 'Hide Password';
+//   } else {
+//     passwordInput.type = 'password';
+//     icon.textcontent = 'View Password';
+//   }
+// };
+
 document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
