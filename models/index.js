@@ -1,15 +1,12 @@
 const Owner = require('./Owner');
-const Sitter = require('./Sitter');
+const PetSittingRequest = require('./PetSittingRequest');
 
-Owner.hasMany(Sitter, {
+Owner.hasMany(PetSittingRequest, {
   foreignKey: 'owner_id',
   onDelete: 'CASCADE'
 });
+PetSittingRequest.belongsTo(Owner, {
+  foreignKey: 'owner_id'  
+})
 
-Sitter.belongsTo(Owner, {
-  foreignKey: 'sitter_id'
-});
-
-module.exports = { Owner, Sitter };
-
-//pushing this up
+module.exports = { Owner, PetSittingRequest };

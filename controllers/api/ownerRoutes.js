@@ -6,7 +6,7 @@ router.post('/', async (req, res) => {
     const ownerData = await Owner.create(req.body);
 
     req.session.save(() => {
-      req.session.user_id = ownerData.id;
+      req.session.owner_id = ownerData.id;
       req.session.logged_in = true;
 
       res.status(200).json(ownerData);
@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
     }
 
     req.session.save(() => {
-      req.session.user_id = ownerData.id;
+      req.session.owner_id = ownerData.id;
       req.session.logged_in = true;
       
       res.json({ owner: ownerData, message: 'You are now logged in!' });

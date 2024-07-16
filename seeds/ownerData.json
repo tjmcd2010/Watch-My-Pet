@@ -1,26 +1,17 @@
 [
   {
-    "first_name": "John",
-    "last_name": "Doe",
+    "ownerName": "John",
     "email": "john@doe.com",
-    "password": "12345678",
-    "animal_type": "dog",
-    "breed": "labrador"
+    "password": "12345678"
   },
   {
-    "first_name": "Jane",
-    "last_name": "Doe",
+    "ownerName": "Jane",
     "email": "jane@doe.com",
-    "password": "12345678",
-    "animal_type": "cat",
-    "breed": "persian"
+    "password": "a9d0f78b"
   },
   {
-    "first_name": "Bob",
-    "last_name": "Smith",
+    "ownerName": "Bob",
     "email": "bob@smith.com",
-    "password": "12345678",
-    "animal_type": "dog",
-    "breed": "golden retriever"
+    "password": "u3h2n5f6"
   }
 ]

@@ -1,25 +1,31 @@
 const router = require('express').Router();
-const { Sitter, Owner } = require('../models');
+const { PetSittingRequest, Owner } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const sitterData = await Sitter.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+    // Get all PetSittingRequests and JOIN with user data
+    // const PetSittingRequestData = await PetSittingRequest.findAll({
+    //   include: [
+    //     {
+    //       model: Owner,
+    //       attributes: ['ownerName'],
+    //     },
+    //     {
+    //       model: PetSittingRequest,
+    //       attributes: ['petName', 'petType', 'petBreed', 'petWeight', 'serviceType', 'serviceStartDate', 'serviceEndDate', 'ownerPhone'], 
+    //       /**??????include owner_id??? */
+    //     },
+    //   ],
+    // });
 
-    // Serialize data so the template can read it
-    const sitters = sitterData.map((project) => sitter.get({ plain: true }));
+    // // Serialize data so the template can read it
+    // const requests = PetSittingRequestData.map((request) => request.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      sitters, 
+      layout: 'simple',
+      // requests, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -27,52 +33,50 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/sitter/:id', async (req, res) => {
+router.get('/request', async (req, res) => {
   try {
-    const sitterData = await Sitter.findByPk(req.params.id, {
+    
+
+    const requestData = await PetSittingRequest.findAll({
       include: [
         {
-          model: User,
-          attributes: ['name'],
-        },
+          model: Owner,
+          attributes: ['ownerName'],
+        }
       ],
     });
+    
+    const requests = requestData.map((request) => request.get({ plain: true }));
 
-    const sitter = sitterData.get({ plain: true });
-
-    res.render('sitter', {
-      ...sitter,
+    res.render('request', {
+      requests,
       logged_in: req.session.logged_in
     });
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
 
-// Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const ownerData = await Owner.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Sitter }],
-    });
-
-    const owner = ownerData.get({ plain: true });
-
-    res.render('profile', {
-      ...user,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
+router.get('/create', async (req, res) => {
+  // If the owner is already logged in, redirect the request to another route
+  if (!req.session.logged_in) {
+    res.redirect('/login');
+    return;
   }
+
+  const ownerData = await Owner.findByPk(req.session.owner_id);
+
+  const owner = ownerData.get({ plain: true });
+
+  res.render('createrequest', {...owner, logged_in: true});
 });
+
 
 router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
+  // If the owner is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/profile');
+    res.redirect('/request');
     return;
   }
 

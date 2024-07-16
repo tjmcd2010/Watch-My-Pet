@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
-const { Owner, Sitter } = require('../models');
+const { Owner, PetSittingRequest } = require('../models');
 
 const ownerData = require('./ownerData.json');
-const sitterData = require('./sitterData.json');
+const requestData = require('./petSittingRequestData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -11,17 +11,13 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-  const sitters = await Sitter.bulkCreate(sitterData, {
-    individualHooks: true,
-    returning: true,
-  });
 
-  // for (const sitter of sitterData) {
-  //   await Sitter.create({
-  //     ...sitter,
-  //     user_id: users[Math.floor(Math.random() * users.length)].id,
-  //   });
-  // }
+  for (const requests of requestData) {
+    await PetSittingRequest.create({
+      ...requests,
+      owner_id: owners[Math.floor(Math.random() * owners.length)].id,
+    });
+  }
 
   process.exit(0);
 };
