@@ -58,6 +58,28 @@ router.get('/request', async (req, res) => {
   }
 });
 
+router.get('/request/:id', async (req, res) => {
+  try {
+    const requestData = await PetSittingRequest.findByPk(req.params.id, {
+      include: [
+        {
+          model: Owner,
+          attributes: ['ownerName'],
+        }
+      ],
+    });
+
+    const request = requestData.get({ plain: true });
+
+    res.render('singlerequest', {
+      ...request,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 router.get('/create', async (req, res) => {
   // If the owner is already logged in, redirect the request to another route
   if (!req.session.logged_in) {
