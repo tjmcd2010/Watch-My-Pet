@@ -17,4 +17,17 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
+/*CSS for single Pet Sitting Request*/
+.row.mt-4 {
+  display: block;
+}
+
+.text-primary {
+  color: red;
+  font-weight: bold;
+}
+
+
+
+
 
