@@ -160,13 +160,13 @@ TBD. See `LICENSE.txt` for more information.
 
 Project Link: [https://github.com/tjmcd2010/Watch-My-Pet](https://github.com/tjmcd2010/Watch-My-Pet)
 
-Anna - [GitHub: explorer7733](https://github.com/explorer7733) - ?@gmail.com
+Anna - [GitHub: explorer7733](https://github.com/explorer7733) 
 
-Hunter Mitchell - [GitHub: jhmitchell10](https://github.com/jhmitchell10) - ?@gmail.com
+Hunter Mitchell - [GitHub: jhmitchell10](https://github.com/jhmitchell10)
 
-Gio Cagliari - [GitHub: GeoMaster101](https://github.com/GeoMaster101) - Giovannicagliari73@gmail.com
+Gio Cagliari - [GitHub: GeoMaster101](https://github.com/GeoMaster101)
 
-Travis McDermott - [GitHub: tjmcd2010](https://github.com/tjmcd2010) - ?@gmail.com
+Travis McDermott - [GitHub: tjmcd2010](https://github.com/tjmcd2010)
 
 
 
