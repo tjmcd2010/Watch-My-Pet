@@ -3,14 +3,16 @@ module.exports = {
     // Format date as MM/DD/YYYY
     return date.toLocaleDateString();
   },
+  ///???? should we delete it???
   format_amount: (amount) => {
     // format large numbers with commas
     return parseInt(amount).toLocaleString();
   },
+  
+  //!!!!!!!!!! Return a random emoji - NEEDS TO BE DELETED OR UPDATED IF NOT NEEDED
   get_emoji: () => {
     const randomNum = Math.random();
 
-    //!!!!!!!!!! Return a random emoji - NEEDS TO BE DELETED OR UPDATED IF NOT NEEDED
     if (randomNum > 0.7) {
       return `<span for="img" aria-label="lightbulb">💡</span>`;
     } else if (randomNum > 0.4) {

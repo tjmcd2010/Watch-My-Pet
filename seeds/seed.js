@@ -3,7 +3,6 @@ const { Owner, PetSittingRequest } = require('../models');
 
 const ownerData = require('./ownerData.json');
 const requestData = require('./petSittingRequestData.json');
-
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 

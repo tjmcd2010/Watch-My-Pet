@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Owner } = require('../../models');
 
+// Route for creating a new Pet owner
 router.post('/', async (req, res) => {
   try {
     const ownerData = await Owner.create(req.body);
@@ -15,7 +16,7 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+// Route to login
 router.post('/login', async (req, res) => {
   try {
     const ownerData = await Owner.findOne({ where: { email: req.body.email } });
@@ -47,7 +48,7 @@ router.post('/login', async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+// Route to logout
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
