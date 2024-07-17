@@ -2,41 +2,22 @@ const router = require('express').Router();
 const { PetSittingRequest, Owner } = require('../models');
 const withAuth = require('../utils/auth');
 
+// Route for homepage
 router.get('/', async (req, res) => {
   try {
-    // Get all PetSittingRequests and JOIN with user data
-    // const PetSittingRequestData = await PetSittingRequest.findAll({
-    //   include: [
-    //     {
-    //       model: Owner,
-    //       attributes: ['ownerName'],
-    //     },
-    //     {
-    //       model: PetSittingRequest,
-    //       attributes: ['petName', 'petType', 'petBreed', 'petWeight', 'serviceType', 'serviceStartDate', 'serviceEndDate', 'ownerPhone'], 
-    //       /**??????include owner_id??? */
-    //     },
-    //   ],
-    // });
-
-    // // Serialize data so the template can read it
-    // const requests = PetSittingRequestData.map((request) => request.get({ plain: true }));
-
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
+    res.render('homepage', {
       layout: 'main',
       // requests, 
-      logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
+// Route for all Pet Sitting requests
 router.get('/request', async (req, res) => {
   try {
-    
-
     const requestData = await PetSittingRequest.findAll({
       include: [
         {
@@ -45,7 +26,7 @@ router.get('/request', async (req, res) => {
         }
       ],
     });
-    
+
     const requests = requestData.map((request) => request.get({ plain: true }));
 
     res.render('request', {
@@ -58,6 +39,7 @@ router.get('/request', async (req, res) => {
   }
 });
 
+// Route for single Pet Sitting request
 router.get('/request/:id', async (req, res) => {
   try {
     const requestData = await PetSittingRequest.findByPk(req.params.id, {
@@ -80,8 +62,9 @@ router.get('/request/:id', async (req, res) => {
   }
 })
 
+// Route for creating a new Pet Sitting request
 router.get('/create', async (req, res) => {
-  // If the owner is already logged in, redirect the request to another route
+  // If the owner is not logged in, redirect the request to login route
   if (!req.session.logged_in) {
     res.redirect('/login');
     return;
@@ -91,17 +74,15 @@ router.get('/create', async (req, res) => {
 
   const owner = ownerData.get({ plain: true });
 
-  res.render('createrequest', {...owner, logged_in: true});
+  res.render('createrequest', { ...owner, logged_in: true });
 });
 
-
 router.get('/login', (req, res) => {
-  // If the owner is already logged in, redirect the request to another route
+  // If the owner is already logged in, redirect the request to request route
   if (req.session.logged_in) {
     res.redirect('/request');
     return;
   }
-
   res.render('login');
 });
 

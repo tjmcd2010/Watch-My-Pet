@@ -21,7 +21,6 @@ const loginFormHandler = async (event) => {
     }
   }
 };
-
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -30,7 +29,7 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#password-signup').value.trim();
 
   if (name && email && password) {
-    const response = await fetch('/api/owners', { /**?????? check if /api/ownerRuotes.js */
+    const response = await fetch('/api/owners', { 
       method: 'POST',
       body: JSON.stringify({ name, email, password }),
       headers: { 'Content-Type': 'application/json' },
@@ -43,19 +42,6 @@ const signupFormHandler = async (event) => {
     }
   }
 };
-
-// const viewPasswordHandler = () => {
-//   const passwordInput = document.querySelector('#password-login');
-//   const icon = document.querySelector('#view-password');
-
-//   if (passwordInput.type === 'password') {
-//     passwordInput.type = 'text';
-//     icon.textcontent = 'Hide Password';
-//   } else {
-//     passwordInput.type = 'password';
-//     icon.textcontent = 'View Password';
-//   }
-// };
 
 document
   .querySelector('.login-form')
