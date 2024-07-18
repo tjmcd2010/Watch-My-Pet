@@ -1,12 +1,16 @@
 <!-- to show the single request -->
 <div class="row mt-4">
   <div><span class ="text-primary">Owner name: </span>{{ownerName}}</div>
-  <div><span class ="text-primary">Pet name: </span>{{petName}}</div>
-  <div><span class ="text-primary">Pet type: </span>{{petType}}</div>
-  <div><span class ="text-primary">Pet breed: </span>{{petBreed}}</div>
-  <div><span class ="text-primary">Pet weight: </span>{{petWeight}}</div>
+  <div><span class ="text-primary">Pet: </span>{{petName}}, {{petType}}, {{petBreed}}, {{petWeight}} </div>
   <div><span class ="text-primary">Service type: </span>{{serviceType}}</div>
   <div><span class ="text-primary">Service start date: </span>{{format_date serviceStartDate}}</div>
   <div><span class ="text-primary">Service end date: </span>{{format_date serviceEndDate}}</div>
   <div><span class ="text-primary">Owner phone #: </span>{{ownerPhone}}</div>
+  <!--delete button-->
+  <div>
+    <button class="btn btn-danger delete-btn" data-request-id="{{requestId}}">DELETE REQUEST</button>
+  </div>
+
 </div>
+
+<script src="/js/request.js"></script>

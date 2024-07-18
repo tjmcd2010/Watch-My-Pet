@@ -26,3 +26,33 @@ document.querySelector("#new-request-form").addEventListener("submit", (event) =
     });
 });
 
+// Delete request function
+function deleteRequest(id) {
+  const confirmDelete = confirm("Are you sure you want to delete this request?");
+  if (!confirmDelete) {
+    return;
+  }
+  fetch(`/api/requests/${requestId}`, {
+    method: "DELETE",
+  })
+    .then((response) => {
+      if (response.ok) {
+        document.location.reload();
+      } else {
+        alert("Failed to delete request.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}
+
+// Add event listener to delete button
+document.querySelectorAll(".delete-btn").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    const requestedId = button.getAttribute("data-request-id");
+    deleteRequest(requestedId);
+  });
+});
+
+

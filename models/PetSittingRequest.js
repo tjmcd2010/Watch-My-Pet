@@ -2,7 +2,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class PetSittingRequest extends Model {}
+class PetSittingRequest extends Model {
+    get pet() {
+        return `${this.petName} - ${this.petType} - ${this.petBreed} - ${this.petWeight}`
+    };
+}
 
 PetSittingRequest.init(
     {
@@ -12,12 +16,10 @@ PetSittingRequest.init(
             primaryKey: true,
             autoIncrement: true
         },
-        owner_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'owner',
-                key: 'id'
-            }
+        
+        ownerName: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
         petName: {
             type: DataTypes.STRING,
@@ -56,7 +58,12 @@ PetSittingRequest.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'petsittingrequest'
+        modelName: 'petsittingrequest',
+        getterMethods: {
+            pet() {
+                return `${this.petName} - ${this.petType} - ${this.petBreed} - ${this.petWeight}`
+            }  
+        }
     }
 );
 
