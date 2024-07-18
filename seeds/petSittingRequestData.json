@@ -1,6 +1,6 @@
 [
     {
-        "owner_id": 1,
+        "ownerName": "John",
         "petName": "Fluffy",
         "petType": "Dog",
         "petBreed": "Domestic",
@@ -12,7 +12,7 @@
     },
 
     {
-        "owner_id": 2,
+        "ownerName": "Jane",
         "petName": "Max",
         "petType": "Dog",
         "petBreed": "Labrador",
@@ -24,7 +24,7 @@
     },
 
     {
-        "owner_id": 3,
+        "ownerName": "Bob",
         "petName": "Charlie",
         "petType": "Cat",
         "petBreed": "Domestic",

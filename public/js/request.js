@@ -11,7 +11,7 @@ document.querySelector("#new-request-form").addEventListener("submit", (event) =
 
   const requestBody = JSON.stringify({ petName, petType, petBreed, petWeight, serviceType, serviceStartDate, serviceEndDate, ownerPhone });
 
-  fetch("/api/requests", {
+  fetch("/api/request", {
     method: "POST",
     body: requestBody,
     headers: {
@@ -25,4 +25,6 @@ document.querySelector("#new-request-form").addEventListener("submit", (event) =
       console.error("Error:", error);
     });
 });
+
+
 

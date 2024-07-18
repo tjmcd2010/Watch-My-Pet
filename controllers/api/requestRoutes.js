@@ -17,6 +17,24 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+// Route for deleting a Pet Sitting request
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const deletedRequest = await PetSittingRequest.destroy({
+      where: {
+        id: req.params.id
+      }
+    });
+    if (!deletedRequest) {
+      res.status(404).json({ message: 'No request found with this id!' });
+      return;
+    }
+    res.status(200).json(deletedRequest);
+  } catch (err) {
+    res.status(500).json(err);
+  }  
+});
+
 module.exports = router;
 
 
