@@ -10,7 +10,7 @@ function deleteRequest(requestId) {
       .then((response) => {
         if (response.ok) {
           //document.location.reload(); //redirect to homepage
-          window.location.href = "/"
+          window.location.href = "/request"
         } else {
           alert("Failed to delete request.");
         }

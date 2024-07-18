@@ -26,5 +26,3 @@ document.querySelector("#new-request-form").addEventListener("submit", (event) =
     });
 });
 
-
-

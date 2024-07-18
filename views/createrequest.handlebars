@@ -3,47 +3,49 @@
     <h2>Welcome, {{ownerName}}!</h2>
   </div>
 </div>
-
-<div class="col-md-6">
+  
   <h3>Create a New Pet Sitting Request:</h3>
-
-  <form class="form new-request-form" id="new-request-form">
-    <div class="form-group">
-      <label for="pet-name">Pet name: </label>
-      <input class="form-input" type="text" id="pet-name" name="pet-name" />
-    </div>
-    <div class="form-group">
-      <label for="pet-type">Pet type: </label>
-      <input class="form-input" type="text" id="pet-type" name="pet-type" />
-    </div>
-    <div class="form-group">
-      <label for="pet-breed">Pet breed: </label>
-      <input class="form-input" id="pet-breed" name="pet-breed" />
-    </div>
-    <div class="form-group">
-      <label for="pet-weight">Pet weight: </label>
-      <input class="form-input" id="pet-weight" name="pet-wieght" />
-    </div>
-    <div class="form-group">
-      <label for="service-type">Service type: </label>
-      <input class="form-input" id="service-type" name="service-type" />
-    </div>
-    <div class="form-group">
-      <label for="service-start-date">Service start date: </label>
-      <input class="form-input" id="service-start-date" name="service-start-date" />
-    </div>
-    <div class="form-group">
-      <label for="service-end-date">Service end date: </label>
-      <input class="form-input" id="service-end-date" name="service-end-date" />
-    </div>
-    <div class="form-group">
-      <label for="owner-phone">Owner phone #: </label>
-      <input class="form-input" id="owner-phone" name="owner-phone" />
-    </div>
-    <div class="form-group">
+<div class="row">
+    <form class="form new-request-form" id="new-request-form">
+      <div class = "row">
+        <div class = "input-field col s12">
+          <input id="pet-name" type="text" class="validate">
+           <label for="pet-name">Pet Name</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="pet-type" type="text" class="validate">
+            <label for="pet-type">Pet Type</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="pet-breed" type="text" class="validate">
+            <label for="pet-breed">Pet Breed</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="pet-weight" type="text" class="validate">
+            <label for="pet-weight">Pet Weight</label>
+        </div>
+        <div class="input-field col s12">
+          <input placeholder="Owner House Sitting, Sitter House Sitting, Walking Service" id="service-type" type="text" class="validate">
+            <label for="service-type">Service Type</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="service-start-date" type="date" class="datepicker">
+            <label for="service-type">Service Start Date</label>
+        </div>
+        <div class="input-field col s12">
+          <input id="service-end-date" type="date" class="datepicker">
+            <label for="service-end-date">Service End Date</label>
+        </div>
+        <div class="input-field col s12">
+          <input placeholder="xxx-xxx-xxxx" id="owner-phone" type="text" class="validate">
+            <label for="owner-phone">Owner Phone Number</label>
+        </div>
+      </div>
+     <div class="form-group">
       <button type="submit" class="btn btn-primary">Create</button>
-    </div>
-  </form>
-</div>
+    </div>       
+    </form>
+  </div>
+  <script src="./js/request.js"></script>
+        
 
-<script src="./js/request.js"></script>

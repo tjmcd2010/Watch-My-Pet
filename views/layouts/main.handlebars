@@ -7,25 +7,30 @@
   <title>Watch My Pet!</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1> Watch My Pet!</h1></a>
-      <div>
+     <nav>
+    <div class="nav-wrapper #b2dfdb teal lighten-3">
+        <a href="/" class="brand-logo"> Watch My Pet </a>
+             <ul id="nav-mobile" class="right hide-on-med-and-down">
+            
         {{#if logged_in}}
-        <a href="/create">Create New Request | </a>
-        <button class="no-button" id="logout">logout</button>
+        <li> <a href="/request">Pet Sitting Requests</a></li>
+        <li><a href="/create">Create New Request </a></li>
+        <li><button class="no-button" id="logout">logout</button></li>
+        
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">Login</a>
         {{/if}}
       </div>
-      <div>
-        <a href="/request">Pet Sitting Requests</a>
-      </div>
-    </header>
-   
+    </div>
+    </ul>
+      </nav>
+  <div class="flex-column justify-space-around">
+      
     <main class="container container-fluid mt-5">
       {{{ body }}}
     </main>
@@ -35,6 +40,17 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src = "../public/js/request.js"></script>
+  
 </body>
+<footer class="page-footer #b2dfdb teal lighten-3">
+    <div class="footer-copyright">
+        <div class="container">
+      <center> <a href = "https://github.com/tjmcd2010/Watch-My-Pet"> © 2024 SQL Injectors</a> </center>
+            </div>
+          </div>
+        </footer>
 
 </html>
