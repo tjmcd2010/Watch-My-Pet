@@ -1,6 +1,6 @@
 [
     {
-        "ownerName": "John",
+        "owner_id": 1,
         "petName": "Fluffy",
         "petType": "Dog",
         "petBreed": "Domestic",
@@ -12,7 +12,7 @@
     },
 
     {
-        "ownerName": "Jane",
+        "owner_id": 2,
         "petName": "Max",
         "petType": "Dog",
         "petBreed": "Labrador",
@@ -24,7 +24,7 @@
     },
 
     {
-        "ownerName": "Bob",
+        "owner_id": 3,
         "petName": "Charlie",
         "petType": "Cat",
         "petBreed": "Domestic",
@@ -34,5 +34,4 @@
         "serviceEndDate": "2024-08-09",
         "ownerPhone": "333-333-3333"
     }
-
 ]
