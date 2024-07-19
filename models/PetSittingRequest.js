@@ -3,9 +3,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class PetSittingRequest extends Model {
-    // get pet() {
-    //     return `${this.petName} - ${this.petType} - ${this.petBreed} - ${this.petWeight}`
-    // };
+   
 }
 
 PetSittingRequest.init(
