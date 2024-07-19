@@ -6,7 +6,7 @@ Owner.hasMany(PetSittingRequest, {
   onDelete: 'CASCADE'
 });
 PetSittingRequest.belongsTo(Owner, {
-  foreignKey: 'owner_id'  
+  foreignKey: 'owner_id'
 })
 
 module.exports = { Owner, PetSittingRequest };

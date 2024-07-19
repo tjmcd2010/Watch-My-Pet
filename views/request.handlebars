@@ -2,8 +2,7 @@
   {{#if requests.length}}
   <div class="centered">
     <h4>Current Requests:</h4>
-
-    <table class = "striped centered">
+    <table class="striped centered">
       <thead>
         <tr>
           <th>Pet Name</th>
@@ -12,30 +11,19 @@
           <th>Service End Date</th>
         </tr>
       </thead>
-      <tbody>         
+      <tbody>
         {{#each requests as |request|}}
-          <tr>
-            <td> <a href="/request/{{request.id}}"> {{request.petName}}:</td>
-            <td>{{request.serviceType}}</td>
-            <td>{{format_date request.serviceStartDate}}</td>
-            <td>{{format_date request.serviceStartDate}}</td>
-          </tr>
-        {{/each}}  
-          </div>
-         
-         
-          {{else}}
-    <h3>No Requests yet</h3>
+        <tr>
+          <td> <a href="/request/{{request.id}}"> {{request.petName}}:</td>
+          <td>{{request.serviceType}}</td>
+          <td>{{format_date request.serviceStartDate}}</td>
+          <td>{{format_date request.serviceStartDate}}</td>
+        </tr>
+        {{/each}}
   </div>
-
-
-
-        </tbody>
-        {{/if}}
-      </table>
-     
-    
-  
-
-
-  
+  {{else}}
+  <h3>No Requests yet</h3>
+</div>
+</tbody>
+{{/if}}
+</table>
