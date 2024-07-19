@@ -79,18 +79,26 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Main Page](./public/Images/Main.png)
+![Login Page](./public/Images/Login.png)
+![Create New Request](./public/Images/Create.png)
+![Display List of Requests](./public/Images/Requests.png)
 
+## Deployed Application Link
+
+[Watch My Pet](https://watch-my-pet.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Project Description
 
-* TBD
+This is an interactive full-stack web application with a responsive design that will work on all screens. The app, "Watch My Pet", offers a pet sitting service that has been deployed to render.com. The use case for this application is a small tight-nit community where neighbors help each other by offering to watch or walk their pets while they’re away. An owner needs to log in or create an account in order to create a request. Available sitters would simply navigate the url and view pet sitting requests and respond accordingly if they’re available on the requested dates.
 
 ### Challenges We Faced
 
-* TBD.
+1. We utilized Materialize UI for this project, which is a library we have not yet been introduced to, which caused some styling challenges. 
+2. We had some other minor challenges when it came to database structure and ensuring that tables were correctly mapped, due to naming conventions. 
+3. As we worked through the project, we found several other ideas that would be great for future iterations, but time constraints didn't allow us to continue further development. 
 
 ### Built With
 
@@ -100,11 +108,21 @@
 * [![PostgreSQL][PostgreSQL.org]][PostgreSQL-url]
 * [![Sequelize][Sequelizejs.com]][Sequelize-url]
 * [![Render][Render.com]][Render-url]
+* [!Materialize][https://materializecss.com/][Materialize-url]
 
+* Utilized Node.js and Express.js to create a RESTful API.
+* Utilized Handlebars.js as the template engine.
+* Utilized PostgreSQL and the Sequelize ORM for the database.
+* Created GET, DELETE and POST routes for retrieving, deleting and adding new data.
+* Applied Materialize which is a new library that we haven’t previously utilized or discussed for the UI design.
+* Created a folder structure that meets the MVC paradigm.
+* Added authentication (express-session and cookies), specifically disallowing non-logged in owners to create requests.
+* Protected API keys and sensitive information with environment variables.
+* Successfully deployed application using Render (with data).
+* Applied a responsive design for all devices.
+* Built an interactive application (i.e., accept and respond to user input).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -112,55 +130,38 @@
 
 This website was built and tested using Chromium based browsers <a href="https://www.opera.com/gx">Opera GX</a> and <a href="(https://www.google.com/chrome/">Google Chrome</a> on a <a href="https://www.microsoft.com/en-us/software-download/windows10%20">Windows 10</a> machine, but should be viewable on any HTML supported browser.
 
-This website was built using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting">CSS nesting</a>, a relatively new feature. If you have issues viewing this webpage on your browser, please <a href="mailto:smoreno2014@gmail.com">contact me</a>.
-
 ### Installation
 
-* TBD
-
-
-
+No installation necessary. Simply navigate to [Watch My Pet](https://watch-my-pet.onrender.com) and continue your journey as a sitter or an owner. 
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-When visiting the application  at <a href="https://N/A">https://N/A</a> the user is presented with a blank page, and is prompted to search for a song.
-
-Enter a query into the search box, then click the 'search' button.
+When visiting the application  at <a href="https://watch-my-pet.onrender.com">Watch My Pet</a> the user is presented with a page that gives the user the options to either view current pet sitting requests, log in or create a new request. If opting to create a new request, the user will be prompted to either sign in to an existing account or create a new one. 
 
 ```
+* AS a pet owner
+  * WHEN I create a user account
+  * THEN I can create a a pet sitting request. 
 * AS a pet owner, I want to be able to locate somebody that can watch my pet while I’m away
   * WHEN I’m planning a trip
-  * THEN I can select a pet sitter from my community
+  * THEN I can enter my pet details and service dates
 * AS a pet sitter, I want to be able to offer my services as a pet sitter
   * WHEN I’m available to pet sit
-  * THEN I can offer my availability and services offered along with prices
-* AS an app user
-  * WHEN I create a user account
-  * THEN I can create my profile as pet sitter or pet owner with details of my needs/services
+  * THEN I can view pet sitting requests and reach out to the owner with my availabilty. 
+
 
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- LICENSE -->
-## License
-
-TBD. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
-## Contact
-
+## Contributors
 
 Project Link: [https://github.com/tjmcd2010/Watch-My-Pet](https://github.com/tjmcd2010/Watch-My-Pet)
 
-Anna - [GitHub: explorer7733](https://github.com/explorer7733) 
+Anna Krentz- [GitHub: explorer7733](https://github.com/explorer7733) 
 
 Hunter Mitchell - [GitHub: jhmitchell10](https://github.com/jhmitchell10)
 
@@ -212,3 +213,5 @@ Travis McDermott - [GitHub: tjmcd2010](https://github.com/tjmcd2010)
 [Sequelize-url]: https://sequelize.org/
 [Render.com]: https://img.shields.io/badge/Render-000000?style=for-the-badge&logo=render&logoColor=white
 [Render-url]: https://render.com/
+[Materialize.com]: https://img.shields.io/badge/Materialize-000000?style=for-the-badge&logo=render&logoColor=white
+[Materialize-url]: https://materializecss.com/
