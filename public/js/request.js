@@ -20,6 +20,7 @@ document.querySelector("#new-request-form").addEventListener("submit", (event) =
   })
     .then(() => {
       alert("Submitted!");
+      window.location.href = "/request";
     })
     .catch((error) => {
       console.error("Error:", error);
