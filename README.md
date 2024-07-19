@@ -108,7 +108,7 @@ This is an interactive full-stack web application with a responsive design that 
 * [![PostgreSQL][PostgreSQL.org]][PostgreSQL-url]
 * [![Sequelize][Sequelizejs.com]][Sequelize-url]
 * [![Render][Render.com]][Render-url]
-* [!Materialize][https://materializecss.com/][Materialize-url]
+* [![Materialize][Materializecss.com]][Materialize-url]
 
 * Utilized Node.js and Express.js to create a RESTful API.
 * Utilized Handlebars.js as the template engine.
