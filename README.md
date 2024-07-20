@@ -213,5 +213,5 @@ Travis McDermott - [GitHub: tjmcd2010](https://github.com/tjmcd2010)
 [Sequelize-url]: https://sequelize.org/
 [Render.com]: https://img.shields.io/badge/Render-000000?style=for-the-badge&logo=render&logoColor=white
 [Render-url]: https://render.com/
-[Materialize.com]: https://img.shields.io/badge/Materialize-000000?style=for-the-badge&logo=render&logoColor=white
+[Materializecss.com]: https://img.shields.io/badge/Materialize-FF8A80?style=for-the-badge&logo=&logoColor=white
 [Materialize-url]: https://materializecss.com/
