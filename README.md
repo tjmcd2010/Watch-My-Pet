@@ -83,6 +83,7 @@
 ![Login Page](./public/Images/Login.png)
 ![Create New Request](./public/Images/Create.png)
 ![Display List of Requests](./public/Images/Requests.png)
+![Display a Single Record](./public/Images/Record.png)
 
 ## Deployed Application Link
 
