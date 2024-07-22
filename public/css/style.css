@@ -20,10 +20,6 @@ header,
   text-decoration: underline;
 }
 
-.text-primary {
-  font-weight: bold;
-}
-
 h2 {
   font-size: 2rem;
   align-content: center;
@@ -66,10 +62,7 @@ article {
   justify-content: space-around;
 }
 
-/*CSS for single Pet Sitting Request*/
-.row.mt-4 {
-  display: block;
-}
+
 
 /*Media Queries*/
 @media screen and (min-width: 640px) {
@@ -98,3 +91,27 @@ article {
     margin-bottom: 20px;
   }
 }
+/*CSS Styling for Single Request Handlebars */
+.row.mt-4 {
+  display: block;
+  font-size: x-large;
+  justify-content: space-between;
+}
+  
+.text-primary {
+    font-weight: bold;
+    float: inline-start;
+    margin-right: 20px;
+    margin-left: 5px;
+    justify-content: space-evenly;
+  }
+
+.output {
+  font-size: x-large;
+  float: inherit;
+  justify-content: space-evenly;
+}
+.card-header {
+  background-color: aqua;
+}
+

@@ -29,7 +29,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/tjmcd2010/Watch-My-Pet">
-    <img src="./assets/images/pedroraccoon.gif" alt="pepesadrain" width="80" height="80">
+    <img src="./public/Images/wmp.png" alt="dog Watch my Petlogo" width="80" height="80">
   </a>
 
 <h1 align="center">Watch My Pet</h1>
@@ -83,6 +83,7 @@
 ![Login Page](./public/Images/Login.png)
 ![Create New Request](./public/Images/Create.png)
 ![Display List of Requests](./public/Images/Requests.png)
+![Display a Single Record](./public/Images/Record.png)
 
 ## Deployed Application Link
 
